@@ -1,1 +1,1 @@
-# website portfolio — Take A Peek At The Pixels!
+# website portfolio — Look At The Fancy Pixels!
