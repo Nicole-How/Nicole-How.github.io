@@ -6757,14 +6757,14 @@ __p+='`),
     function pM(e, t) {
       return e === Va ? t.replace("STYLE_", "").toLowerCase() : null;
     }
-    function vM(e, t, r, n, o, i, a, u, c) {
+    function vM(element, t, color, n, o, i, a, u, c) {
       switch (u) {
         case wE:
-          return yM(e, t, r, o, a);
+          return yM(element, t, color, o, a);
         case Va:
-          return wM(e, t, r, o, i, a);
+          return wM(element, t, color, o, i, a);
         case Xa:
-          return CM(e, o, a);
+          return CM(element, o, a);
         case CE: {
           let { actionTypeId: f } = o;
           if ((0, pt.isPluginType)(f)) return (0, pt.renderPlugin)(f)(c, t, o);
@@ -15880,16 +15880,16 @@ Webflow.require("ix2").init({
                 duration: 300,
                 target: {
                   useEventTarget: "CHILDREN",
-                  selector: ".heading-2.simplifi",
+                  selector: ".heading-2.projectL",
                   selectorGuids: [
                     "654beb2b-4ec8-647e-3e77-e82d78a387e0",
                     "e7cad44c-dbd5-745b-c3c9-a2962cf70dfe",
                   ],
                 },
                 globalSwatchId: "ffd5b525",
-                rValue: 110,
-                bValue: 154,
-                gValue: 154,
+                rValue: 169,
+                bValue: 75,
+                gValue: 205,
                 aValue: 1,
               },
             },
@@ -15902,7 +15902,7 @@ Webflow.require("ix2").init({
                 duration: 400,
                 target: {
                   useEventTarget: "CHILDREN",
-                  selector: ".heading-2.simplifi",
+                  selector: ".heading-2.projectL",
                   selectorGuids: [
                     "654beb2b-4ec8-647e-3e77-e82d78a387e0",
                     "e7cad44c-dbd5-745b-c3c9-a2962cf70dfe",
@@ -15923,7 +15923,7 @@ Webflow.require("ix2").init({
                 duration: 400,
                 target: {
                   useEventTarget: "CHILDREN",
-                  selector: ".working-img.simplifi",
+                  selector: ".working-img.projectL",
                   selectorGuids: [
                     "1b8eb7b3-a6e8-88bd-8165-e325fb97c12b",
                     "b04ff69a-f319-9cdb-239d-862f81fbba05",
