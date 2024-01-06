@@ -1227,6 +1227,10 @@ body {
   align-items: flex-start;
 }
 
+.dino:hover {
+  cursor: pointer
+}
+
 .landing-wrapper {
   height: 100%;
   flex-direction: row;
