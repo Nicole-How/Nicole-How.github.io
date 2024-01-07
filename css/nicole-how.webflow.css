@@ -1469,6 +1469,11 @@ body {
   background-color: var(--project-l);
 }
 
+.default-button.kivo {
+  border-color: var(--kivo);
+  background-color: var(--kivo);
+}
+
 .button-text {
   color: var(--white-50);
   font-weight: 600;
