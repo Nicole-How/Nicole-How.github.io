@@ -1483,6 +1483,16 @@ body {
   color: var(--charcoal-800);
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: var(--charcoal-800);
+  background: var(--white-50);
+}
+
+::selection {
+  color: var(--charcoal-800);
+  background: var(--white-50);
+}
+
 .progress-bar {
   z-index: 99;
   width: 100svw;
