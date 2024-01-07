@@ -2756,6 +2756,7 @@ body {
   .container {
     left: 0;
   }
+  
 
   .container.landing {
     flex: 1;
@@ -2766,6 +2767,10 @@ body {
   .heading-1 {
     margin-bottom: 8px;
     font-size: 48px;
+  }
+
+  .heading-1.prjLanding-center {
+    text-align: center;
   }
 
   .heading-1._404 {
