@@ -16,6 +16,10 @@
   --600: #393939;
 }
 
+.dino:hover {
+  cursor: pointer
+}
+
 .w-layout-blockcontainer {
   max-width: 940px;
   margin-left: auto;
