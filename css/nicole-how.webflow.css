@@ -544,8 +544,6 @@ body {
 }
 
 .body-sml-text.card-text {
-  flex: 1;
-  margin-bottom: 0;
   font-size: 14px;
 }
 
@@ -724,7 +722,7 @@ body {
   display: block;
 }
 
-.project_content.home, .project_content.patient-emr {
+.project_content.home, .project_content._0t {
   margin-top: 0;
 }
 
@@ -875,7 +873,7 @@ body {
 }
 
 .in-line-link:hover {
-  background-color: var(--blue);
+  background-color: var(--white-50);
   color: var(--charcoal-800);
 }
 
@@ -1150,12 +1148,7 @@ body {
   align-items: flex-start;
 }
 
-.dino:hover {
-  cursor: pointer
-}
-
 .landing-wrapper {
-  height: 100%;
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
@@ -1404,16 +1397,6 @@ body {
 
 .button-text.black {
   color: var(--charcoal-800);
-}
-
-::-moz-selection { /* Code for Firefox */
-  color: var(--charcoal-800);
-  background: var(--white-50);
-}
-
-::selection {
-  color: var(--charcoal-800);
-  background: var(--white-50);
 }
 
 .progress-bar {
@@ -1754,8 +1737,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 24%;
-  padding-right: 24%;
+  padding-left: 20%;
+  padding-right: 20%;
   display: flex;
 }
 
@@ -2297,11 +2280,6 @@ body {
     color: var(--white-50);
   }
 
-  .card-link {
-    align-items: stretch;
-    display: block;
-  }
-
   .competitors {
     margin-top: 100px;
   }
@@ -2659,11 +2637,6 @@ body {
     font-size: 18px;
   }
 
-  .landing-page {
-    height: 100%;
-    padding-bottom: 124px;
-  }
-
   .tags-container {
     grid-column-gap: 8px;
     grid-row-gap: 8px;
@@ -2756,7 +2729,6 @@ body {
   .container {
     left: 0;
   }
-  
 
   .container.landing {
     flex: 1;
@@ -2764,16 +2736,17 @@ body {
     align-items: stretch;
   }
 
+  .container.sml {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
   .heading-1 {
     margin-bottom: 8px;
     font-size: 48px;
   }
 
-  .heading-1.prjLanding-center {
-    text-align: center;
-  }
-
-  .heading-1._404 {
+  .heading-1._404, .heading-1.prjlanding-center {
     text-align: center;
   }
 
@@ -2790,28 +2763,24 @@ body {
   }
 
   .contact {
-    flex-direction: column;
     margin-top: 0;
-    padding-left: 72px;
-    display: flex;
   }
 
   .intro-contact {
-    max-width: 100%;
+    min-height: 50%;
+    min-width: 100%;
+    border-left-width: 0;
+    border-right-width: 0;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 48px;
+    align-items: center;
+    padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-    border-left-width: 0px; 
-    border-right-width: 0px;
   }
 
-  .social {
-    flex-direction: column;
-    align-items: flex-start;
-    display: flex;
+  .heading-5.prjlanding-center {
+    text-align: center;
   }
 
   .heading-2 {
@@ -2891,10 +2860,12 @@ body {
   }
 
   .intro-container {
+    min-height: var(--dynamic-view-height);
     flex-direction: column;
+    justify-content: space-around;
     align-items: flex-start;
-    padding-top: 164px;
-    padding-bottom: 164px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .appointments, .low-fi, .visual-design, .scheduler-webapp, .patient-overview, .lab-results {
@@ -2938,11 +2909,12 @@ body {
   }
 
   .landing-page {
-    height: 100vh;
     justify-content: flex-start;
-    margin-top: 0;
-    padding-top: 64px;
-    padding-bottom: 32px;
+  }
+
+  .landingtext-container {
+    min-height: var(--dynamic-view-height);
+    justify-content: space-around;
   }
 
   .tags-container.card-pad {
@@ -2950,7 +2922,7 @@ body {
   }
 
   .dino {
-    min-width: 30%;
+    padding-bottom: 15%;
   }
 
   .project-wrapper {
@@ -2983,9 +2955,10 @@ body {
   }
 
   .landing-intro {
+    min-height: 50%;
+    border-left-width: 0;
     padding-left: 0;
     padding-right: 0;
-    border-left-width: 0px;
   }
 
   .card-wrapper-grid {
@@ -3023,8 +2996,8 @@ body {
   }
 
   .container.sml {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 8%;
+    padding-right: 8%;
   }
 
   .heading-3 {
@@ -3053,7 +3026,9 @@ body {
   }
 
   .intro-contact {
-    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 32px;
   }
 
   .social.footer-edits {
@@ -3133,7 +3108,8 @@ body {
   }
 
   .intro-container {
-    align-items: flex-start;
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   .nav-wrapper {
@@ -3163,12 +3139,19 @@ body {
     padding-bottom: 48px;
   }
 
-  .landing-page {
-    padding-top: 72px;
+  .landingtext-container {
+    min-width: 100%;
+    padding-right: 0;
   }
 
   .dino {
+    min-height: 60svh;
+    min-width: 60%;
     display: none;
+  }
+
+  .landing-wrapper {
+    flex-direction: column;
   }
 
   .project-card {
