@@ -12,6 +12,7 @@
   --icheon: #1d4599;
   --project-l: #97d92e;
   --kivo: #e8d31d;
+  --cosmoQuest: #EF5510;
   --400: #6f6f6f;
   --600: #393939;
 }
@@ -1232,17 +1233,17 @@ body {
   background-position: -800% 100%;
 }
 
-.project-card.sdg {
-  background-color: var(--sdg);
+.project-card.cosmo {
+  background-color: var(--cosmoQuest);
   color: var(--charcoal-800);
-  background-image: url('../images/SDG.webp');
+  background-image: url('../images/cosmoCover.webp');
   background-position: 50% 100%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   background-size: 75%;
   transition: all .3s cubic-bezier(.645, .045, .355, 1);
 }
 
-.project-card.sdg:hover {
+.project-card.cosmo:hover {
   background-color: var(--charcoal-800);
   color: var(--white-50);
   background-position: -800% 100%;
