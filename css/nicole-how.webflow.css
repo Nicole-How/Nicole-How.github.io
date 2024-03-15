@@ -12,7 +12,7 @@
   --icheon: #1d4599;
   --project-l: #97d92e;
   --kivo: #e8d31d;
-  --cosmoQuest: #EF5510;
+  --cosmo: #EF5510;
   --400: #6f6f6f;
   --600: #393939;
 }
@@ -160,7 +160,7 @@ body {
 
 .heading-3 {
   font-family: Space Grotesk, sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 105%;
 }
@@ -217,13 +217,10 @@ body {
 
 .heading-4.orvos {
   color: var(--orvos);
-  line-height: 100%;
-  text-decoration: none;
 }
 
 .heading-4.sdg {
   color: var(--sdg);
-  line-height: 120%;
 }
 
 .heading-4.sprout {
@@ -237,6 +234,11 @@ body {
 .heading-4.icheon {
   color: var(--icheon);
 }
+
+.heading-4.cosmo {
+  color: var(--cosmo);
+}
+
 
 .heading-4.white {
   color: var(--white-50);
@@ -276,7 +278,6 @@ body {
 }
 
 .header-line.sprout-line {
-  border: 1px solid var(--sprout);
   background-color: var(--sprout);
 }
 
@@ -286,6 +287,10 @@ body {
 
 .header-line.icheon-line {
   background-color: var(--icheon);
+}
+
+.header-line.cosmo-line {
+  background-color: var(--cosmo);
 }
 
 .header-line.white {
@@ -442,7 +447,6 @@ body {
 }
 
 .heading-2.orvos-coloured {
-  width: auto;
   color: var(--orvos);
 }
 
@@ -452,7 +456,6 @@ body {
 
 .heading-2.sprout-coloured {
   color: var(--sprout);
-  font-family: Work Sans, sans-serif;
 }
 
 .heading-2.worlds-coloured {
@@ -461,6 +464,10 @@ body {
 
 .heading-2.icheon-coloured {
   color: var(--icheon);
+}
+
+.heading-2.cosmo-coloured {
+  color: var(--cosmo);
 }
 
 .heading-2.white {
@@ -523,6 +530,10 @@ body {
 
 .intro.icheon {
   background-color: var(--icheon);
+}
+
+.intro.cosmo {
+  background-color: var(--cosmo);
 }
 
 .prj-desc {
@@ -676,6 +687,10 @@ body {
   background-color: var(--icheon);
 }
 
+.challenge.cosmo {
+  background-color: var(--cosmo);
+}
+
 .challenge.project-l {
   background-color: var(--project-l);
 }
@@ -759,7 +774,7 @@ body {
   object-fit: fill;
   flex: 1;
   align-items: flex-end;
-  padding-top: 20px;
+  padding-top: 8px;
   font-size: 18px;
   display: flex;
 }
@@ -1234,7 +1249,7 @@ body {
 }
 
 .project-card.cosmo {
-  background-color: var(--cosmoQuest);
+  background-color: var(--cosmo);
   color: var(--charcoal-800);
   background-image: url('../images/cosmoCover.webp');
   background-position: 50% 100%;
@@ -1321,6 +1336,10 @@ body {
   background-color: var(--kivo);
 }
 
+.prototype-banner.cosmo {
+  background-color: var(--cosmo);
+}
+
 .wrapper-vertical {
   flex-direction: column;
   align-items: flex-start;
@@ -1373,6 +1392,11 @@ body {
 .default-button.icheon {
   border-color: var(--icheon);
   background-color: var(--icheon);
+}
+
+.default-button.cosmo {
+  border-color: var(--cosmo);
+  background-color: var(--cosmo);
 }
 
 .default-button.sprout {
@@ -3182,7 +3206,7 @@ body {
 
   .card-wrapper-grid {
     grid-template-rows: auto auto auto auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
   }
 
   .card-wrapper-grid._2-2 {
