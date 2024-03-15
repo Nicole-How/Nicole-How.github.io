@@ -764,9 +764,14 @@ body {
   right: 0%;
 }
 
+.source-link.white {
+  color: var(--white-50);
+}
+
 .source-link:hover {
   background-color: var(--600);
   color: var(--white-50);
+  text-decoration: underline;
 }
 
 .card-link {
@@ -1843,7 +1848,16 @@ body {
   border: 1px solid #f2f3ff;
   border-radius: 15px;
   flex-direction: column;
-  padding: 20px;
+  display: flex;
+  box-shadow: 0 20px 30px -15px rgba(29, 1, 80, .1);
+}
+
+.card-small.black {
+  min-height: 100%;
+  background-color: var(--charcoal-800);
+  color: var(--200);
+  flex-direction: column;
+  padding: 0px 20px 20px 20px;
   display: flex;
   box-shadow: 0 20px 30px -15px rgba(29, 1, 80, .1);
 }
@@ -2140,8 +2154,6 @@ body {
   }
 
   .heading-3 {
-    margin-top: 0;
-    margin-bottom: 0;
     font-size: 48px;
   }
 
@@ -2301,6 +2313,10 @@ body {
 
   .source-link {
     font-size: 24px;
+  }
+  
+  .source-link.white {
+    color: var(--white-50);
   }
 
   .source-link:hover {
@@ -3029,8 +3045,6 @@ body {
   }
 
   .heading-3 {
-    margin-top: 32px;
-    margin-bottom: 0;
     font-size: 20px;
     line-height: 142%;
   }
