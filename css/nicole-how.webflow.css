@@ -1259,7 +1259,7 @@ body {
   background-image: url('../images/cosmoCover.webp');
   background-position: 50% 100%;
   background-repeat: no-repeat; 
-  background-size: 75%;
+  background-size: 85%;
   transition: all .3s cubic-bezier(.645, .045, .355, 1);
 }
 
