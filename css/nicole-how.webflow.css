@@ -1848,6 +1848,7 @@ body {
   border: 1px solid #f2f3ff;
   border-radius: 15px;
   flex-direction: column;
+  padding: 20px 20px 20px 20px;
   display: flex;
   box-shadow: 0 20px 30px -15px rgba(29, 1, 80, .1);
 }
@@ -1857,7 +1858,7 @@ body {
   background-color: var(--charcoal-800);
   color: var(--200);
   flex-direction: column;
-  padding: 0px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
   display: flex;
   box-shadow: 0 20px 30px -15px rgba(29, 1, 80, .1);
 }
