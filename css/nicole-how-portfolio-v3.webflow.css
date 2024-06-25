@@ -1871,6 +1871,10 @@ figcaption {
   padding-top: 2em;
 }
 
+.work_wrapper.cms_hide {
+  display: none;
+}
+
 .work_list {
   grid-column-gap: 1em;
   grid-row-gap: 1em;
@@ -1904,6 +1908,28 @@ figcaption {
   display: flex;
   position: relative;
   overflow: hidden;
+}
+
+.prj_block.orvos {
+  background-image: url('../images/Orvos_Featureimg.webp');
+}
+
+.prj_block.kivo {
+  background-image: url('../images/kivo_featureImg.jpg');
+  background-position: 25%;
+}
+
+.prj_block.sfny {
+  background-image: url('../images/SFNY_featureImg.jpg');
+  background-position: 50%;
+}
+
+.prj_block.cosmo {
+  background-image: url('../images/prjBlock_cosmoQuest.webp');
+}
+
+.prj_block.projectl {
+  background-image: url('../images/Project-L-Thumbnail.webp');
 }
 
 .prj_gradient {
