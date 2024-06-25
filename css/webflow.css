@@ -104,6 +104,9 @@ html[data-w-dynpage] [data-w-cloak] {
 .w-code-block {
   margin: unset;
 }
+pre.w-code-block code {
+  all: inherit;
+}
 .w-webflow-badge,
 .w-webflow-badge * {
   position: static;
@@ -1814,4 +1817,11 @@ textarea.w-select {
 }
 .wf-layout-layout {
   display: grid;
+}
+.w-code-component > * {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
