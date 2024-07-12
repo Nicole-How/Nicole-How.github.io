@@ -22,4 +22,5 @@ jobs:
         strategy: 'mobile'
 
     - name: Echo score
-      run: echo "Score: ${{ steps.psi.outputs.score }}"
+      run: |
+        echo "Score: ${{ steps.psi.outputs.score }}"
