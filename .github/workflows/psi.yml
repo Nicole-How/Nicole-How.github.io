@@ -1,4 +1,4 @@
-name: PSI Score
+name: psi-score
 
 on:
   push:
@@ -23,4 +23,11 @@ jobs:
 
     - name: Echo score
       run: |
-        echo "Score: ${{ steps.psi.outputs.score }}"
+        echo "Score: ${{ steps.psi.outputs.score }} / 100"
+        echo "FCP: ${{ steps.psi.outputs.first-contentful-paint }}"
+        echo "FID: ${{ steps.psi.outputs.first-input-delay }}"
+        echo "CLS: ${{ steps.psi.outputs.cumulative-layout-shift }}"
+        echo "LCP: ${{ steps.psi.outputs.largest-contentful-paint }}"
+        echo "Speed: ${{ steps.psi.outputs.speed-index }} / 100"
+        echo "TOT: ${{ steps.psi.outputs.time-to-interactive }} / 100"
+        echo "TBT: ${{ steps.psi.outputs.total-blocking-time }} / 100"
