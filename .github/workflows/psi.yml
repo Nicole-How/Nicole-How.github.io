@@ -17,8 +17,8 @@ jobs:
       id: psi
       uses: stefafafan/psi-action@v1.0.1
       with:
-        url: 'https://example.com/'
-        key: ${{ secrets.API_KEY }}
+        url: 'https://nicole-how.github.io/'
+        key: ${{ secrets.API_KEY_PAGE_SPEEDS }}
         strategy: 'mobile'
 
     - name: Echo score
