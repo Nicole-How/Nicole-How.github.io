@@ -25,6 +25,8 @@
   --project--kivo: #f5de14;
   --project--sfny: #ecf4fa;
   --project--project-l: #baf45a;
+  --project--ths: #3044e3;
+  --project--sdg: #00aed9;
   --base-color-brand--cozy-blue-200: #8da5ff;
   --base-color-greyscale--grey-800: #181818;
   --base-color-greyscale--grey-700: #262626;
@@ -33,6 +35,7 @@
   --base-color-greyscale--grey-200: #d5d5d5;
   --base-color-greyscale--grey-50: #f3f3f3;
   --base-color-brand--cozy-blue-100: #e0e7ff;
+  --project--worlds: #321bdd;
   --base-color-system--success-green\<deleted\|variable-8fc09a81-a1c7-3c5b-2cf2-835ad5d96212\>: #cef5ca;
   --base-color-greyscale--neutral-darker\<deleted\|variable-dda6ad91-259a-0202-f70f-965feb273058\>: #222;
   --base-color-brand--pink\<deleted\|variable-c4661572-8a15-7367-e98c-cc1a0987f6d1\>: #dd23bb;
@@ -1330,6 +1333,10 @@ figcaption {
   border: 1px solid var(--border-color--border-greyed-out-alternate);
 }
 
+.aspect-ratio-portrait.cover {
+  object-fit: cover;
+}
+
 .aspect-ratio-landscape {
   aspect-ratio: 3 / 2;
   object-fit: cover;
@@ -1338,10 +1345,6 @@ figcaption {
 .aspect-ratio-landscape.img_contain {
   aspect-ratio: auto;
   object-fit: contain;
-}
-
-.aspect-ratio-landscape._100-_width {
-  width: 100%;
 }
 
 .aspect-ratio-widescreen {
@@ -1468,16 +1471,16 @@ figcaption {
 .nav_link:focus-visible {
   outline-color: var(--border-color--border-alternate);
   outline-offset: 2px;
-  background-color: rgba(231, 231, 231, .5);
-  outline-width: 1px;
+  background-color: rgba(231, 231, 231, .6);
+  outline-width: 2px;
   outline-style: dashed;
 }
 
 .nav_link[data-wf-focus-visible] {
   outline-color: var(--border-color--border-alternate);
   outline-offset: 2px;
-  background-color: rgba(231, 231, 231, .5);
-  outline-width: 1px;
+  background-color: rgba(231, 231, 231, .6);
+  outline-width: 2px;
   outline-style: dashed;
 }
 
@@ -1665,11 +1668,13 @@ figcaption {
 }
 
 .link-inlinetext:focus-visible {
-  background-color: var(--text-color--text-highlighted);
+  outline-offset: 2px;
+  outline: 2px dotted #181818;
 }
 
 .link-inlinetext[data-wf-focus-visible] {
-  background-color: var(--text-color--text-highlighted);
+  outline-offset: 2px;
+  outline: 2px dotted #181818;
 }
 
 .footerlink_wrapper {
@@ -1843,11 +1848,6 @@ figcaption {
   display: flex;
 }
 
-.marquee-content.scroll.reverse {
-  grid-column-gap: 1.5rem;
-  grid-row-gap: 1.5rem;
-}
-
 .marquee_icon {
   border-radius: 0;
   width: auto;
@@ -1886,9 +1886,7 @@ figcaption {
 }
 
 .work_item {
-  border-radius: 4px;
   position: relative;
-  overflow: hidden;
 }
 
 .prj_block {
@@ -1896,13 +1894,14 @@ figcaption {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
   background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
-  background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 6px;
   flex-flow: column;
   justify-content: flex-end;
   height: 80svh;
+  min-height: 40svh;
+  max-height: 100svh;
   padding: 1.5rem;
   transition: all .2s;
   display: flex;
@@ -1910,26 +1909,55 @@ figcaption {
   overflow: hidden;
 }
 
+.prj_block:focus-visible {
+  outline-color: var(--border-color--border-primary);
+  outline-width: 4px;
+  outline-style: dotted;
+}
+
+.prj_block[data-wf-focus-visible] {
+  outline-color: var(--border-color--border-primary);
+  outline-width: 4px;
+  outline-style: dotted;
+}
+
 .prj_block.orvos {
   background-image: url('../images/Orvos_Featureimg.webp');
+  background-position: 50%;
 }
 
 .prj_block.kivo {
-  background-image: url('../images/kivo_featureImg.jpg');
+  background-image: url('../images/kivo_featureImg.webp');
   background-position: 25%;
 }
 
 .prj_block.sfny {
-  background-image: url('../images/SFNY_featureImg.jpg');
+  background-image: url('../images/SFNY_featureImg.webp');
   background-position: 50%;
 }
 
 .prj_block.cosmo {
   background-image: url('../images/prjBlock_cosmoQuest.webp');
+  background-position: 50%;
 }
 
 .prj_block.projectl {
   background-image: url('../images/Project-L-Thumbnail.webp');
+}
+
+.prj_block.ths {
+  background-image: url('../images/Bombers-Jacket-Mockup.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.prj_block.worlds {
+  background-image: url('../images/worlds_prjBlock.webp');
+}
+
+.prj_block.sdg {
+  background-image: url('../images/SDG_featureImg.webp');
 }
 
 .prj_gradient {
@@ -1954,16 +1982,43 @@ figcaption {
 
 .social_icons {
   color: var(--background-color--background-button-primary);
+  justify-content: center;
+  align-items: center;
   width: 3.5svw;
+  display: flex;
 }
 
 .social_icons:hover {
   color: var(--base-color-greyscale--grey-600);
 }
 
+.social_icons:focus-visible {
+  outline-color: var(--border-color--border-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+  outline-width: 2px;
+  outline-style: dotted;
+}
+
+.social_icons[data-wf-focus-visible] {
+  outline-color: var(--border-color--border-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+  outline-width: 2px;
+  outline-style: dotted;
+}
+
 .social_icons.alternate {
   color: var(--background-color--background-alternate);
   width: 3svw;
+}
+
+.social_icons.alternate:focus-visible {
+  outline-color: var(--border-color--border-alternate);
+}
+
+.social_icons.alternate[data-wf-focus-visible] {
+  outline-color: var(--border-color--border-alternate);
 }
 
 .icons_wrapper {
@@ -2033,6 +2088,14 @@ figcaption {
   background-color: var(--project--project-l);
 }
 
+.section_opportunity.ths {
+  background-color: var(--project--ths);
+}
+
+.section_opportunity.sdg {
+  background-color: var(--project--sdg);
+}
+
 .section_highlights.padding-top.padding-large {
   padding-top: 5rem;
 }
@@ -2054,8 +2117,8 @@ figcaption {
 }
 
 .textblock_a.padding-section-small {
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 2.5rem;
 }
 
 .textblocka_content {
@@ -2081,10 +2144,6 @@ figcaption {
   grid-row-gap: 1rem;
   flex-flow: column;
   display: flex;
-}
-
-.text_wrapper._50-_width {
-  width: 50%;
 }
 
 .attribute_row {
@@ -2323,6 +2382,16 @@ figcaption {
   outline-style: dashed;
 }
 
+.primarybtn:focus-visible {
+  outline-offset: 4px;
+  outline: 2px dotted #181818;
+}
+
+.primarybtn[data-wf-focus-visible] {
+  outline-offset: 4px;
+  outline: 2px dotted #181818;
+}
+
 .primarybtn_circle {
   z-index: 1;
   background-color: var(--background-color--background-button-primary);
@@ -2504,7 +2573,7 @@ figcaption {
     padding-bottom: 5rem;
   }
 
-  .text-size-regular, .text-weight-bold.link-inlinetext.text-size-regular, .heading-style-h4 {
+  .text-size-regular, .heading-style-h4 {
     font-size: 1.5rem;
   }
 
@@ -2537,11 +2606,6 @@ figcaption {
   .tag.alternate {
     border-width: 2px;
     padding: .5rem 1rem;
-  }
-
-  .heroabout {
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
   }
 
   .link-inlinetext {
@@ -2624,6 +2688,11 @@ figcaption {
 
   .tag.alternate {
     border-width: 3px;
+  }
+
+  .heroabout {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
   }
 
   .abouthero_text {
@@ -3004,7 +3073,7 @@ figcaption {
   }
 
   .marquee_logo.is-taller {
-    height: 6svh;
+    height: 5svh;
   }
 
   .prj_block {
@@ -3357,7 +3426,15 @@ figcaption {
   }
 
   .prj_block {
-    height: 60svh;
+    height: 100svh;
+  }
+
+  .prj_block.orvos {
+    background-position: 80%;
+  }
+
+  .prj_block.cosmo {
+    background-position: 25%;
   }
 
   .prj_gradient {
@@ -3562,8 +3639,21 @@ figcaption {
     grid-template-columns: 1fr 1fr;
   }
 
+  .marquee_logo.is-taller {
+    height: 4svh;
+  }
+
   .prj_block {
     background-position: 75%;
+    height: 60svh;
+  }
+
+  .prj_block.orvos {
+    background-position: 75%;
+  }
+
+  .prj_block.cosmo {
+    background-position: 25%;
   }
 
   .prjblock_text {
@@ -3680,6 +3770,12 @@ figcaption {
 #w-node-_1fe4e56f-5648-6f02-09a3-9f72fe3e95f0-f9330189 {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 1440px) {
+  #w-node-_4ed361a9-0eba-a109-d078-ee5f349893e6-fbc48724 {
+    grid-area: span 1 / span 1 / span 1 / span 1;
+  }
 }
 
 @media screen and (max-width: 991px) {
