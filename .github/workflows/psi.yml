@@ -1,0 +1,25 @@
+name: PSI Score
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Get PSI Score
+      id: psi
+      uses: stefafafan/psi-action@v1.0.1
+      with:
+        url: 'https://example.com/'
+        key: ${{ secrets.API_KEY }}
+        strategy: 'mobile'
+
+    - name: Echo score
+      run: echo "Score: ${{ steps.psi.outputs.score }}"
