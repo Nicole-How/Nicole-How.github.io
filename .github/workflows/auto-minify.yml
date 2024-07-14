@@ -10,14 +10,13 @@ jobs:
       - name: Auto-minify the js directory
         uses: nizarmah/auto-minify@v3
         with:
-          directory: 'js'
           overwrite: true
 
-      - name: Auto-minify the css directory
-        uses: nizarmah/auto-minify@v3
-        with:
-          directory: 'css'
-          overwrite: true
+      # - name: Auto-minify the css directory
+      #   uses: nizarmah/auto-minify@v3
+      #   with:
+      #     directory: 'css'
+      #     overwrite: true
 
       - name: Auto-commit the minified files
         uses: stefanzweifel/git-auto-commit-action@v5
