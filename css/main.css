@@ -58,6 +58,22 @@
   --base-color-system--warning-yellow\<deleted\|variable-b0ee00e7-091a-a3f5-1619-b09d07f4475a\>: #fcf8d8;
 }
 
+/* page load in animation */
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-15svh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0svh);
+    opacity: 1;
+  }
+}
+
+.fadeInDown-animation {
+  animation: fadeInDown 0.5s ease-in-out normal forwards;
+}
+
 .dino:hover {
   cursor: pointer;
 }
