@@ -61,7 +61,7 @@
 /* page load in animation */
 @keyframes fadeInDown {
   0% {
-    transform: translateY(-15svh);
+    transform: translateY(-10svh);
     opacity: 0;
   }
   100% {
@@ -71,7 +71,7 @@
 }
 
 .fadeInDown-animation {
-  animation: fadeInDown 0.25s ease-out normal forwards;
+  animation: fadeInDown 0.15s ease-out normal forwards;
 }
 
 .dino:hover {
