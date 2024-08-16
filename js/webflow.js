@@ -38049,6 +38049,281 @@
     },
   });
 
+  // Tab code exported from Webflow (before minified change to export)
+  var require_webflow_tabs = __commonJS({
+    "packages/shared/render/plugins/Tabs/webflow-tabs.js"(exports, module) {
+      var Webflow2 = require_webflow_lib();
+      var IXEvents = require_webflow_ix2_events();
+      Webflow2.define(
+        "tabs",
+        (module.exports = function ($2) {
+          var api = {};
+          var tram = $2.tram;
+          var $doc = $2(document);
+          var $tabs;
+          var design;
+          var env = Webflow2.env;
+          var safari = env.safari;
+          var inApp = env();
+          var tabAttr = "data-w-tab";
+          var paneAttr = "data-w-pane";
+          var namespace = ".w-tabs";
+          var linkCurrent = "w--current";
+          var tabActive = "w--tab-active";
+          var ix = IXEvents.triggers;
+          var inRedraw = false;
+          api.ready = api.design = api.preview = init;
+          api.redraw = function () {
+            inRedraw = true;
+            init();
+            inRedraw = false;
+          };
+          api.destroy = function () {
+            $tabs = $doc.find(namespace);
+            if (!$tabs.length) {
+              return;
+            }
+            $tabs.each(resetIX);
+            removeListeners();
+          };
+          function init() {
+            design = inApp && Webflow2.env("design");
+            $tabs = $doc.find(namespace);
+            if (!$tabs.length) {
+              return;
+            }
+            $tabs.each(build);
+            if (Webflow2.env("preview") && !inRedraw) {
+              $tabs.each(resetIX);
+            }
+            removeListeners();
+            addListeners();
+          }
+          function removeListeners() {
+            Webflow2.redraw.off(api.redraw);
+          }
+          function addListeners() {
+            Webflow2.redraw.on(api.redraw);
+          }
+          function resetIX(i, el) {
+            var data = $2.data(el, namespace);
+            if (!data) {
+              return;
+            }
+            data.links && data.links.each(ix.reset);
+            data.panes && data.panes.each(ix.reset);
+          }
+          function build(i, el) {
+            var widgetHash = namespace.substr(1) + "-" + i;
+            var $el = $2(el);
+            var data = $2.data(el, namespace);
+            if (!data) {
+              data = $2.data(el, namespace, {
+                el: $el,
+                config: {},
+              });
+            }
+            data.current = null;
+            data.tabIdentifier = widgetHash + "-" + tabAttr;
+            data.paneIdentifier = widgetHash + "-" + paneAttr;
+            data.menu = $el.children(".w-tab-menu");
+            data.links = data.menu.children(".w-tab-link");
+            data.content = $el.children(".w-tab-content");
+            data.panes = data.content.children(".w-tab-pane");
+            data.el.off(namespace);
+            data.links.off(namespace);
+            data.menu.attr("role", "tablist");
+            data.links.attr("tabindex", "-1");
+            configure(data);
+            if (!design) {
+              data.links.on("click" + namespace, linkSelect(data));
+              data.links.on("keydown" + namespace, handleLinkKeydown(data));
+              var $link = data.links.filter("." + linkCurrent);
+              var tab = $link.attr(tabAttr);
+              tab &&
+                changeTab(data, {
+                  tab,
+                  immediate: true,
+                });
+            }
+          }
+          function configure(data) {
+            var config = {};
+            config.easing = data.el.attr("data-easing") || "ease";
+            var intro = parseInt(data.el.attr("data-duration-in"), 10);
+            intro = config.intro = intro === intro ? intro : 0;
+            var outro = parseInt(data.el.attr("data-duration-out"), 10);
+            outro = config.outro = outro === outro ? outro : 0;
+            config.immediate = !intro && !outro;
+            data.config = config;
+          }
+          function getActiveTabIdx(data) {
+            var tab = data.current;
+            return Array.prototype.findIndex.call(
+              data.links,
+              (t) => {
+                return t.getAttribute(tabAttr) === tab;
+              },
+              null
+            );
+          }
+          function linkSelect(data) {
+            return function (evt) {
+              evt.preventDefault();
+              var tab = evt.currentTarget.getAttribute(tabAttr);
+              tab &&
+                changeTab(data, {
+                  tab,
+                });
+            };
+          }
+          function handleLinkKeydown(data) {
+            return function (evt) {
+              var currentIdx = getActiveTabIdx(data);
+              var keyName = evt.key;
+              var keyMap = {
+                ArrowLeft: currentIdx - 1,
+                ArrowUp: currentIdx - 1,
+                ArrowRight: currentIdx + 1,
+                ArrowDown: currentIdx + 1,
+                End: data.links.length - 1,
+                Home: 0,
+              };
+              if (!(keyName in keyMap)) return;
+              evt.preventDefault();
+              var nextIdx = keyMap[keyName];
+              if (nextIdx === -1) {
+                nextIdx = data.links.length - 1;
+              }
+              if (nextIdx === data.links.length) {
+                nextIdx = 0;
+              }
+              var tabEl = data.links[nextIdx];
+              var tab = tabEl.getAttribute(tabAttr);
+              tab &&
+                changeTab(data, {
+                  tab,
+                });
+            };
+          }
+          function changeTab(data, options) {
+            options = options || {};
+            var config = data.config;
+            var easing = config.easing;
+            var tab = options.tab;
+            if (tab === data.current) {
+              return;
+            }
+            data.current = tab;
+            var currentTab;
+            data.links.each(function (i, el) {
+              var $el = $2(el);
+              if (options.immediate || config.immediate) {
+                var pane = data.panes[i];
+                if (!el.id) {
+                  el.id = data.tabIdentifier + "-" + i;
+                }
+                if (!pane.id) {
+                  pane.id = data.paneIdentifier + "-" + i;
+                }
+                el.href = "#" + pane.id;
+                el.setAttribute("role", "tab");
+                el.setAttribute("aria-controls", pane.id);
+                el.setAttribute("aria-selected", "false");
+                pane.setAttribute("role", "tabpanel");
+                pane.setAttribute("aria-labelledby", el.id);
+              }
+              if (el.getAttribute(tabAttr) === tab) {
+                currentTab = el;
+                $el
+                  .addClass(linkCurrent)
+                  .removeAttr("tabindex")
+                  .attr({
+                    "aria-selected": "true",
+                  })
+                  .each(ix.intro);
+              } else if ($el.hasClass(linkCurrent)) {
+                $el
+                  .removeClass(linkCurrent)
+                  .attr({
+                    tabindex: "-1",
+                    "aria-selected": "false",
+                  })
+                  .each(ix.outro);
+              }
+            });
+            var targets = [];
+            var previous = [];
+            data.panes.each(function (i, el) {
+              var $el = $2(el);
+              if (el.getAttribute(tabAttr) === tab) {
+                targets.push(el);
+              } else if ($el.hasClass(tabActive)) {
+                previous.push(el);
+              }
+            });
+            var $targets = $2(targets);
+            var $previous = $2(previous);
+            if (options.immediate || config.immediate) {
+              $targets.addClass(tabActive).each(ix.intro);
+              $previous.removeClass(tabActive);
+              if (!inRedraw) {
+                Webflow2.redraw.up();
+              }
+              return;
+            } else {
+              var x = window.scrollX;
+              var y = window.scrollY;
+              currentTab.focus();
+              window.scrollTo(x, y);
+            }
+            if ($previous.length && config.outro) {
+              $previous.each(ix.outro);
+              tram($previous)
+                .add("opacity " + config.outro + "ms " + easing, {
+                  fallback: safari,
+                })
+                .start({
+                  opacity: 0,
+                })
+                .then(() => fadeIn(config, $previous, $targets));
+            } else {
+              fadeIn(config, $previous, $targets);
+            }
+          }
+          function fadeIn(config, $previous, $targets) {
+            $previous.removeClass(tabActive).css({
+              opacity: "",
+              transition: "",
+              transform: "",
+              width: "",
+              height: "",
+            });
+            $targets.addClass(tabActive).each(ix.intro);
+            Webflow2.redraw.up();
+            if (!config.intro) {
+              return tram($targets).set({
+                opacity: 1,
+              });
+            }
+            tram($targets)
+              .set({
+                opacity: 0,
+              })
+              .redraw()
+              .add("opacity " + config.intro + "ms " + config.easing, {
+                fallback: safari,
+              })
+              .start({
+                opacity: 1,
+              });
+          }
+          return api;
+        })
+      );
+    },
+  });
+
   // <stdin>
   require_webflow_lottie();
   require_webflow_brand();
@@ -38060,6 +38335,7 @@
   require_webflow_scroll();
   require_webflow_touch();
   require_webflow_forms();
+  require_webflow_tabs();
 })();
 /*!
  * tram.js v0.8.2-global
