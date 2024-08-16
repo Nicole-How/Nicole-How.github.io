@@ -1822,7 +1822,7 @@ figcaption {
   width: 100%;
 }
 
-.designprinciples_grid {
+.textBlock_D {
   grid-column-gap: 3rem;
   grid-row-gap: 3rem;
   border-top: 1px solid var(--border-color--border-greyed-out);
@@ -1830,6 +1830,10 @@ figcaption {
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
+}
+
+.no_border {
+  border-top: none;
 }
 
 .tools_wrapper {
@@ -2204,6 +2208,75 @@ figcaption {
   grid-row-gap: 1rem;
   flex-flow: column;
   display: flex;
+}
+
+.tabs-menu-wrapper {
+  background-color: var(--background-color--background-primary);
+  border-radius: 0.5rem;
+  align-items: center;
+  padding: 0.5rem;
+  display: flex;
+}
+
+.tabs-content-wrapper {
+  margin-top: 1rem;
+  overflow: visible;
+}
+
+.tab-content-inner {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.tabs-nav-item {
+  color: var(--background-color--background-alternate);
+  text-align: center;
+  background-color: var(--background-color--background-primary);
+  border-radius: 6px;
+  flex: 1;
+  padding: 1rem 2rem;
+  transition: all .3s;
+  position: relative;
+}
+
+.tabs-nav-item:hover {
+  background-color: var(text);
+}
+
+.tabs-nav-item.w--current {
+  color: var(--text-color--text-primary);
+  background-color: var(--background-color--background-primary);
+  font-weight: 500;
+}
+
+.tabs-nav-item._02.w--current {
+  background-color: var(--background-color--background-alternate);
+}
+
+.tabs-nav-item._01.w--current {
+  background-color: var(--background-color--background-alternate);
+  color: var(--text-color--text-primary);
+}
+
+.tabs-nav-item._03.w--current, .tabs-nav-item._04.w--current {
+  background-color: var(--background-color--background-alternate);
+}
+
+.tabs-nav-background {
+  z-index: 0;
+  border-radius: 8px;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.tabs-nav-text {
+  z-index: 1;
+  position: relative;
+  font-size: 1rem;
 }
 
 .attribute_row {
@@ -3455,7 +3528,7 @@ figcaption {
     font-size: 6rem;
   }
 
-  .designprinciples_grid.padding-section-medium {
+  .textBlock_D {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     grid-template-columns: 1fr;
