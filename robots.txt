@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /documents/Nicole-Resume.pdf
+
+Sitemap: https://nicole-how.github.io/sitemap.xml
+Sitemap: https://nicole-how.github.io/image-sitemap.xml

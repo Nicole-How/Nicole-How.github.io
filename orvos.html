@@ -10,9 +10,10 @@
       http-equiv="Content-Security-Policy"
       content="
     default-src 'self' https://nicole-how.github.io http://127.0.0.1;
-    script-src 'self' https://ajax.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com https://www.googletagmanager.com 'sha256-s4eh5BRgrEOFV+Xs/Q1H7BP8txfSpPhP5JhbMP6iUcU=' 'sha256-8L+IXgGICXGdVmCZxssE9Z6PVToHIPqC+SW5cAd4nE4=' 'sha256-+Yk7bT8XQ5I3hClXEOJhD/WhTHni24P0/u/wf/6SKwI=' 'sha256-78cJaDUgBdpd/PAhYxsqmXTnQ4vmpHWWo0LhGINSws0=';
-    style-src https://fonts.googleapis.com 'self' 'unsafe-inline';
-    img-src 'self' data:;
+    script-src 'self' https://ajax.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com https://www.googletagmanager.com https://cdn.cookie-script.com https://d3e54v103j8qbb.cloudfront.net 'sha256-Q4wWvUeiBHMckZWLBs1pbyZ22E4RXYAmWejP/X1jgcQ=' 'sha256-s4eh5BRgrEOFV+Xs/Q1H7BP8txfSpPhP5JhbMP6iUcU=' 'sha256-8L+IXgGICXGdVmCZxssE9Z6PVToHIPqC+SW5cAd4nE4=' 'sha256-+Yk7bT8XQ5I3hClXEOJhD/WhTHni24P0/u/wf/6SKwI=' 'sha256-78cJaDUgBdpd/PAhYxsqmXTnQ4vmpHWWo0LhGINSws0=';
+    style-src 'self' https://fonts.googleapis.com https://www.googletagmanager.com 'unsafe-inline';
+    img-src 'self' https://www.googletagmanager.com data:;
+    frame-src 'self' https://cdn.embedly.com ;
     font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com 'unsafe-inline';
     connect-src 'self' https://www.google-analytics.com ;
     object-src 'none';
@@ -23,15 +24,29 @@
 "
     />
     <meta charset="utf-8" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5CLH6TB6");
+    </script>
     <title>Orvos [work] — Nicole How</title>
     <meta content="Orvos [work] — Nicole How" property="og:title" />
     <meta content="Orvos [work] — Nicole How" property="twitter:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <!-- CSS Files -->
-    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="/css/webflow.css" rel="stylesheet" type="text/css" />
-    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="/css/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/webflow.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/main.min.css" rel="stylesheet" type="text/css" />
 
     <!-- For Font Stuff -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -46,24 +61,6 @@
     ></script>
     <script type="text/javascript">
       WebFont.load({ google: { families: ["Space Grotesk:regular,500"] } });
-    </script>
-
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-H3PL6VQN9S"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-H3PL6VQN9S");
     </script>
 
     <script type="text/javascript">
@@ -94,6 +91,15 @@
     </style>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5CLH6TB6"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <div class="page-wrapper">
       <div
         aria-labelledby="navTitle"
@@ -134,7 +140,7 @@
                   rel="prerender"
                   href="https://nicole-how.github.io/#work"
                 />
-                <a href="/playful" class="nav_link w-inline-block">
+                <a                     href="/documents/Nicole-Resume.pdf" target="_blank" rel="noopener" class="nav_link w-inline-block">
                   <div
                     id="w-node-_6bca5df8-9712-e52d-0488-cef33a4f1c1d-3a4f1c0d"
                     class="nav_corners"
@@ -144,7 +150,7 @@
                     <div class="nav-corner is--bl"></div>
                     <div class="nav-corner is--br"></div>
                   </div>
-                  <div id="navTitle">Playful</div>
+                  <div id="navTitle">Resume</div>
                 </a>
                 <a href="/about" class="nav_link w-inline-block">
                   <div
@@ -184,6 +190,7 @@
                     aria-label="Behance"
                     href="https://www.behance.net/nicolehow"
                     target="_blank"
+                    rel="noopener"
                     class="social_icons w-inline-block"
                   >
                     <div class="social_icon w-embed">
@@ -215,6 +222,7 @@
                     aria-label="LinkedIn"
                     href="https://www.linkedin.com/in/nicole-how/"
                     target="_blank"
+                    rel="noopener"
                     class="social_icons w-inline-block"
                   >
                     <div class="social_icon w-embed">
@@ -236,6 +244,7 @@
                     aria-label="Instagram"
                     href="https://www.instagram.com/nicole_how.ai/"
                     target="_blank"
+                    rel="noopener"
                     class="social_icons w-inline-block"
                   >
                     <div class="social_icon w-embed">
@@ -280,8 +289,9 @@
                     >how.nicole@hotmail.com</a
                   >
                   <a
-                    href="documents/Nicole-Resume.pdf"
+                    href="/documents/Nicole-Resume.pdf"
                     target="_blank"
+                    rel="noopener"
                     class="button is-text alternate w-button"
                     >resume</a
                   >
@@ -297,12 +307,13 @@
               </a>
               <link rel="prefetch" href="https://nicole-how.github.io/#work" />
               <a
-                href="/playful"
+                href="/documents/Nicole-Resume.pdf"
+                target="_blank"
+                rel="noopener"
                 class="nav_link text-color-alternate w-inline-block"
               >
-                <div>Playful</div>
+                <div>Resume</div>
               </a>
-              <link rel="prefetch" href="/playful" />
               <a
                 href="/about"
                 class="nav_link text-color-alternate w-inline-block"
@@ -509,7 +520,7 @@ a,
         </style>
       </div>
       <div class="progress-bar"></div>
-      <main class="main-wrapper">
+      <main class="main-wrapper fadeInDown-animation">
         <div class="section_prjhero">
           <div class="padding-global padding-section-small">
             <div class="container-large">
@@ -519,10 +530,10 @@ a,
                     <div class="text-size-regular">UX/UI</div>
                   </div>
                   <div class="tag">
-                    <div class="text-size-regular">Hacakthon</div>
+                    <div class="text-size-regular">1st Place</div>
                   </div>
                 </div>
-                <h1>Orvos: Health Management App &amp; Winning Pitch</h1>
+                <h1>Orvos: Health App & Award Winning Pitch, Hack The Woods</h1>
                 <img
                   src="/images/Orvos_Featureimg.webp"
                   loading="lazy"
@@ -602,12 +613,14 @@ a,
                       <a
                         href="https://roslynnip.com/index.html"
                         target="_blank"
+                        rel="noopener"
                         class="link-inlinetext"
                         >Roslyn N,</a
                       >
                       <a
                         href="https://hailey-luong.github.io/"
                         target="_blank"
+                        rel="noopener"
                         class="link-inlinetext"
                         >Hailey L</a
                       >
@@ -666,6 +679,7 @@ a,
                     <a
                       href="https://sybridmd.com/blogs/ehr-updates/problems-with-electronic-health-records-and-their-solutions/"
                       target="_blank"
+                      rel="noopener"
                       class="text-weight-bold link-inlinetext"
                       >EHRs are difficult to use:</a
                     >
@@ -681,6 +695,7 @@ a,
                     <a
                       href="https://www.emsisoft.com/en/blog/37314/the-state-of-ransomware-in-the-us-report-and-statistics-2020/"
                       target="_blank"
+                      rel="noopener"
                       class="text-weight-bold link-inlinetext"
                       >Weak IT security measures:</a
                     >
@@ -696,6 +711,7 @@ a,
                     <a
                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3964421/"
                       target="_blank"
+                      rel="noopener"
                       class="text-weight-bold link-inlinetext"
                       >Get patients more involved:</a
                     >
@@ -1154,6 +1170,7 @@ a,
                   <a
                     href="https://www.figma.com/proto/9gSOyPLvUVPYU1uTtgFipT/Orvos-(Personal-Copy)?page-id=3%3A4&amp;node-id=77-1132&amp;viewport=-96%2C324%2C0.14&amp;t=3POYIItOgcH2l5MD-8&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=77%3A5100&amp;show-proto-sidebar=1&amp;hide-ui=1"
                     target="_blank"
+                    rel="noopener"
                     class="link-inlinetext"
                     >View Prototype</a
                   >
@@ -1268,6 +1285,7 @@ a,
                   <a
                     href="https://www.figma.com/proto/9gSOyPLvUVPYU1uTtgFipT/Orvos-(Personal-Copy)?page-id=110%3A2387&amp;node-id=145-15845&amp;viewport=188%2C224%2C0.07&amp;t=a1RcvsKuXormzxp8-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=145%3A15845&amp;show-proto-sidebar=1"
                     target="_blank"
+                    rel="noopener"
                     class="link-inlinetext"
                     >View Prototype</a
                   >
@@ -1530,8 +1548,9 @@ a,
                       >How.nicole@hotmail.com</a
                     >
                     <a
-                      href="documents/Nicole-Resume.pdf"
+                      href="/documents/Nicole-Resume.pdf"
                       target="_blank"
+                      rel="noopener"
                       class="link-inlinetext_alternate"
                       >Resume</a
                     >
@@ -1551,6 +1570,7 @@ a,
                       aria-label="Behance"
                       href="https://www.behance.net/nicolehow"
                       target="_blank"
+                      rel="noopener"
                       class="social_icons alternate w-inline-block"
                     >
                       <div class="w-embed">
@@ -1582,6 +1602,7 @@ a,
                       aria-label="LinkedIn"
                       href="https://www.linkedin.com/in/nicole-how/"
                       target="_blank"
+                      rel="noopener"
                       class="social_icons alternate w-inline-block"
                     >
                       <div class="w-embed">
@@ -1603,6 +1624,7 @@ a,
                       aria-label="Instagram"
                       href="https://www.instagram.com/nicole_how.ai/"
                       target="_blank"
+                      rel="noopener"
                       class="social_icons alternate w-inline-block"
                     >
                       <div class="w-embed">
@@ -1650,7 +1672,7 @@ a,
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script src="/js/webflow.js" type="text/javascript"></script>
+    <script src="/js/webflow.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
