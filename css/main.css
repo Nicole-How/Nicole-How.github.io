@@ -160,7 +160,7 @@ body {
   font-family: Space Grotesk, sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 h1 {
@@ -1113,8 +1113,11 @@ figcaption {
   color: var(--text-color--text-primary);
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   font-size: 1.5rem;
+  outline-style: dashed;
+  outline-width: 1px;
+
 }
 
 .button:focus-visible {
@@ -2191,7 +2194,7 @@ figcaption {
   border-left: 2px solid var(--border-color--border-primary);
   flex-flow: column;
   padding-left: 1rem;
-  display: flex;
+  display: block;
 }
 
 .prjsection_text {
