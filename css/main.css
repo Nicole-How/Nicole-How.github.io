@@ -1115,9 +1115,6 @@ figcaption {
   background-color: rgba(0, 0, 0, 0);
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
-  outline-style: dashed;
-  outline-width: 1px;
-
 }
 
 .button:focus-visible {
