@@ -2172,17 +2172,12 @@ figcaption {
 }
 
 .textblock_a {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
-}
-
-.textblock_a.padding-section-small {
-  grid-column-gap: 2.5rem;
-  grid-row-gap: 2.5rem;
 }
 
 .textblocka_content {
@@ -2346,10 +2341,10 @@ figcaption {
 
 .spacer_wrapper {
   grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  grid-row-gap: 3rem;
   border-top: 1px solid var(--border-color--border-greyed-out-alternate);
   flex-flow: column;
-  margin-top: 3rem;
+  padding-bottom: 3rem;
   padding-top: 3rem;
   display: flex;
 }
@@ -2582,17 +2577,12 @@ figcaption {
 }
 
 .textblock_b {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
-}
-
-.textblock_b.padding-section-small {
-  grid-column-gap: 3rem;
-  grid-row-gap: 3rem;
 }
 
 .textblockb_content {
@@ -2814,6 +2804,10 @@ figcaption {
     grid-auto-columns: 1fr;
     grid-auto-flow: row dense;
   }
+
+  .spacer_wrapper {
+    grid-row-gap: 4rem;
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -2851,6 +2845,10 @@ figcaption {
   .attribute_row {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .spacer_wrapper {
+    grid-row-gap: 4rem;
   }
 }
 
@@ -3262,15 +3260,14 @@ figcaption {
     display: block;
   }
 
-  .textblock_b.padding-section-small {
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-    grid-template-columns: 1fr;
-  }
-
   .section_work.padding-top.padding-large {
     padding-top: 4rem;
   }
+
+  .spacer_wrapper {
+    grid-row-gap: 3rem;
+  }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -3589,7 +3586,7 @@ figcaption {
     width: 6svw;
   }
 
-  .textblock_a.padding-section-small {
+  .textblock_a {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     grid-template-columns: 1fr;
@@ -3655,12 +3652,6 @@ figcaption {
   .imagegrid_spacer {
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
-  }
-
-  .textblock_b.padding-section-small {
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-    grid-template-columns: 1fr;
   }
 
   .playful_list,
@@ -3819,6 +3810,10 @@ figcaption {
   .imagegallery_list {
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
+  }
+
+  .spacer_wrapper {
+    grid-row-gap: 2rem;
   }
 }
 
