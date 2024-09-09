@@ -2344,8 +2344,8 @@ figcaption {
   grid-row-gap: 3rem;
   border-top: 1px solid var(--border-color--border-greyed-out-alternate);
   flex-flow: column;
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
   display: flex;
 }
 
@@ -2451,10 +2451,6 @@ figcaption {
 .prototypeimg_contain {
   object-fit: contain;
   height: 65svh;
-}
-
-.prjvideo {
-  margin-top: 3rem;
 }
 
 .cta_wrapper {
@@ -3262,6 +3258,10 @@ figcaption {
 
   .section_work.padding-top.padding-large {
     padding-top: 4rem;
+  }
+
+  .prjvideo {
+    margin-top: 3rem;
   }
 
   .spacer_wrapper {
