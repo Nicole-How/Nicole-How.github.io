@@ -1716,21 +1716,25 @@ figcaption {
 
 .link-inlinetext {
   font-size: 1rem;
+  text-decoration: underline var(--border-color--border-primary);
 }
 
 .link-inlinetext:hover {
   outline-offset: 4px;
   outline: 1px dashed #181818;
+  text-decoration: none;
 }
 
 .link-inlinetext:focus-visible {
   outline-offset: 2px;
   outline: 2px dotted #181818;
+  text-decoration: none;
 }
 
 .link-inlinetext[data-wf-focus-visible] {
   outline-offset: 2px;
   outline: 2px dotted #181818;
+  text-decoration: none;
 }
 
 .footerlink_wrapper {
