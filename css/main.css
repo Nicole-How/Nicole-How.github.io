@@ -1890,8 +1890,7 @@ figcaption {
 }
 
 .marquee {
-  grid-column-gap: 1rem;
-  width: 100%;
+  gap: 2rem;
   display: flex;
   overflow: hidden;
 }
@@ -1907,13 +1906,12 @@ figcaption {
 }
 
 .marquee-content {
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
-  flex: none;
+  gap: 2rem;
+  display: flex;
+  flex-shrink: 0;
   justify-content: space-around;
   align-items: center;
   min-width: 100%;
-  display: flex;
 }
 
 .marquee_icon {
@@ -1928,10 +1926,10 @@ figcaption {
 
 .marquee_logo {
   width: auto;
-  height: 6svh;
+  height: 5svh;
 }
 
-.marquee_logo.is-taller {
+.marquee_logo.is-lrg {
   height: 8svh;
 }
 
@@ -3201,14 +3199,6 @@ figcaption {
     grid-row-gap: 1rem;
   }
 
-  .marquee_logo {
-    height: 4svh;
-  }
-
-  .marquee_logo.is-taller {
-    height: 5svh;
-  }
-
   .prj_block {
     height: 40svh;
   }
@@ -3554,7 +3544,12 @@ figcaption {
   }
 
   .marquee_logo {
-    height: 3svh;
+    width: auto;
+    height: 4svh;
+  }
+  
+  .marquee_logo.is-lrg {
+    height: 5svh;
   }
 
   .work_list {
@@ -3771,11 +3766,7 @@ figcaption {
   .image-grid.mobile-2-col {
     grid-template-columns: 1fr 1fr;
   }
-
-  .marquee_logo.is-taller {
-    height: 4svh;
-  }
-
+  
   .prj_block {
     background-position: 75%;
     height: 60svh;
