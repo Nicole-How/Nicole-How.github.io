@@ -1894,6 +1894,7 @@ figcaption {
   display: flex;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  overflow: hidden;
 }
 
 .marquee-content {
