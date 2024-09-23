@@ -1889,12 +1889,15 @@ figcaption {
   padding-bottom: 2rem;
 }
 
-.marquee {
+.marquee-overflowHide {
+  overflow: hidden;
+}
+
+.marquee_scroller {
   gap: 2rem;
   display: flex;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  overflow: hidden;
 }
 
 .marquee-content {
@@ -1903,7 +1906,7 @@ figcaption {
   flex-shrink: 0;
   justify-content: space-around;
   align-items: center;
-  min-width: 100vw;
+  min-width: 100%;
 }
 
 .marquee_icon {
