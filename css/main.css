@@ -1892,17 +1892,8 @@ figcaption {
 .marquee {
   gap: 2rem;
   display: flex;
-  overflow: hidden;
-}
-
-.marquee.padding-section-xsmall {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.marquee.padding-section-tiny {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .marquee-content {
@@ -1911,7 +1902,7 @@ figcaption {
   flex-shrink: 0;
   justify-content: space-around;
   align-items: center;
-  min-width: 100%;
+  min-width: 100vw;
 }
 
 .marquee_icon {
