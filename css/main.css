@@ -1896,8 +1896,8 @@ figcaption {
 .marquee_scroller {
   gap: 2rem;
   display: flex;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .marquee-content {
@@ -3535,11 +3535,11 @@ figcaption {
 
   .marquee_logo {
     width: auto;
-    height: 4svh;
+    height: 3svh;
   }
   
   .marquee_logo.is-lrg {
-    height: 5svh;
+    height: 4svh;
   }
 
   .work_list {
