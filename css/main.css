@@ -2734,11 +2734,6 @@ figcaption {
     grid-row-gap: 3rem;
   }
 
-  .marquee.padding-section-tiny {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
   .marquee_icon {
     height: 5svh;
   }
